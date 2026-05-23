@@ -1,0 +1,331 @@
+mubarak-hospital-system/
+│
+├── index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubarak Clinic and Maternity</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="cross">+</div>
+    <h1>Mubarak Clinic</h1>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#appointment">Appointment</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="darkBtn">🌙</button>
+</header>
+
+<section class="hero" id="home">
+  <h2>Quality Healthcare Always</h2>
+  <p>Trusted healthcare and maternity services in Kano.</p>
+
+  <a href="https://wa.me/2348022710076" class="btn">
+    Chat on WhatsApp
+  </a>
+</section>
+
+<section class="services" id="services">
+
+  <h2>Our Services</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>General Medicine</h3>
+      <p>Professional healthcare consultations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dental Care</h3>
+      <p>Modern dental treatment and oral care.</p>
+    </div>
+
+    <div class="card">
+      <h3>Maternity Care</h3>
+      <p>Safe maternity and pregnancy support.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="doctors" id="doctors">
+
+  <h2>Our Doctors</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Dr. Muhammad</h3>
+      <p>General Medicine</p>
+    </div>
+
+    <div class="card">
+      <h3>Dr. Yasir</h3>
+      <p>Dental Specialist</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="appointment" id="appointment">
+
+  <h2>Book Appointment</h2>
+
+  <form id="appointmentForm">
+
+    <input type="text" placeholder="Patient Name" required>
+
+    <input type="tel" placeholder="Phone Number" required>
+
+    <input type="date" required>
+
+    <select required>
+      <option>Select Department</option>
+      <option>General Medicine</option>
+      <option>Dental</option>
+      <option>Maternity</option>
+    </select>
+
+    <button type="submit">Book Now</button>
+
+  </form>
+
+</section>
+
+<section class="gallery">
+
+  <h2>Hospital Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800">
+    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800">
+    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800">
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <h2>Contact Us</h2>
+
+  <p>📞 08022710076</p>
+  <p>📧 yasirlawan4@gmail.com</p>
+  <p>📍 Sasisa House, Zaria Road Kano</p>
+
+  <iframe
+    src="https://maps.google.com/maps?q=Zaria%20Road%20Kano&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
+
+</section>
+
+<footer>
+  <p>© 2026 Mubarak Clinic and Maternity</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+├── style.css
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial;
+  background:#f5f9ff;
+  color:#222;
+}
+
+.dark{
+  background:#111;
+  color:white;
+}
+
+header{
+  background:#0057b8;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  flex-wrap:wrap;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+}
+
+.cross{
+  background:yellow;
+  color:#0057b8;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  margin-right:10px;
+  font-weight:bold;
+}
+
+nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=1200');
+
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h2{
+  font-size:45px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:yellow;
+  color:#000;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  width:280px;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dark .card{
+  background:#222;
+}
+
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+form input,
+form select,
+form button{
+  margin:10px 0;
+  padding:15px;
+}
+
+form button{
+  background:#0057b8;
+  color:white;
+  border:none;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery-grid img{
+  width:100%;
+  border-radius:10px;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  margin-top:20px;
+}
+
+footer{
+  background:#0057b8;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  .hero h2{
+    font-size:30px;
+  }
+
+}
+├── script.js
+const darkBtn = document.getElementById("darkBtn");
+
+darkBtn.onclick = () => {
+  document.body.classList.toggle("dark");
+};
+
+const form = document.getElementById("appointmentForm");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  alert("Appointment Booked Successfully!");
+
+  form.reset();
+
+});
+├── admin.html
+├── patients.html
+└── images/
